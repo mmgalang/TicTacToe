@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UIAlertViewDelegate>
 {
     __weak IBOutlet UILabel *myLabelOne;
     __weak IBOutlet UILabel *myLabelTwo;
@@ -47,6 +47,25 @@
     if (CGRectContainsPoint(myLabelNine.frame, point)) {foundLabel = myLabelNine;}
     return foundLabel;
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    myLabelOne.text = [NSString stringWithFormat:@" "];
+    myLabelTwo.text = [NSString stringWithFormat:@" "];
+    myLabelThree.text = [NSString stringWithFormat:@" "];
+    myLabelFour.text = [NSString stringWithFormat:@" "];
+    myLabelFive.text = [NSString stringWithFormat:@" "];
+    myLabelSix.text = [NSString stringWithFormat:@" "];
+    myLabelSeven.text = [NSString stringWithFormat:@" "];
+    myLabelEight.text = [NSString stringWithFormat:@" "];
+    myLabelNine.text = [NSString stringWithFormat:@" "];
+    turnCounter = 0;
+    Winner = @"Nobody";
+    whichPlayerLabel.text = @"X";
+    whichPlayerLabel.textColor = [UIColor blueColor];
+}
+
+
+
 int turnCounter = 0;
 NSString *Winner = @"Nobody";
 - (IBAction)onLabelTapped:(UITapGestureRecognizer *)tapGestureRecognizer
@@ -69,15 +88,22 @@ NSString *Winner = @"Nobody";
         
         if ([Winner isEqualToString:@"X"])
         {
-            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"X Wins!" message:@"Hey, O! You lost at Tic Tac Toe? Really?" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"X Wins!" message:@"Hey, O! You lost at Tic Tac Toe? Really?" delegate:self cancelButtonTitle:@"Play Again?"otherButtonTitles: nil];
             [winnerAlert show];
 
         }
         if ([Winner isEqualToString:@"O"])
         {
-            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"O Wins!" message:@"Hey, X! This must be your first time playing, huh?" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"O Wins!" message:@"Hey, X! This must be your first time playing, huh?" delegate:self cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
             [winnerAlert show];
+        }
+        
+            NSLog(@"%d",turnCounter);
             
+        if (turnCounter > 7 && [Winner isEqualToString:@"Nobody"])
+        {
+            UIAlertView *endGame = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"Game" delegate:self cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+                [endGame show];
         }
             turnCounter ++;
             if (turnCounter % 2 == 0) {
