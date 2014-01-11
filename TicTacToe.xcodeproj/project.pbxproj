@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A4BA8171881964900D5D0EB /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4BA8161881964900D5D0EB /* CheckMate.framework */; };
+		9A4BA8191881EC1D00D5D0EB /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4BA8181881EC1D00D5D0EB /* CheckMate.framework */; };
 		A624992E1880869400C1C866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A624992D1880869400C1C866 /* Foundation.framework */; };
 		A62499301880869400C1C866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A624992F1880869400C1C866 /* CoreGraphics.framework */; };
 		A62499321880869400C1C866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62499311880869400C1C866 /* UIKit.framework */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A4BA8161881964900D5D0EB /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CheckMate.framework; path = ../CheckMate.framework; sourceTree = "<group>"; };
+		9A4BA8181881EC1D00D5D0EB /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CheckMate.framework; path = ../CheckMate.framework; sourceTree = "<group>"; };
 		A624992A1880869400C1C866 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A624992D1880869400C1C866 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A624992F1880869400C1C866 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4BA8191881EC1D00D5D0EB /* CheckMate.framework in Frameworks */,
+				9A4BA8171881964900D5D0EB /* CheckMate.framework in Frameworks */,
 				A62499631880C30E00C1C866 /* CheckMate.framework in Frameworks */,
 				A62499301880869400C1C866 /* CoreGraphics.framework in Frameworks */,
 				A62499321880869400C1C866 /* UIKit.framework in Frameworks */,
@@ -104,6 +110,8 @@
 		A624992C1880869400C1C866 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A4BA8181881EC1D00D5D0EB /* CheckMate.framework */,
+				9A4BA8161881964900D5D0EB /* CheckMate.framework */,
 				A62499621880C30E00C1C866 /* CheckMate.framework */,
 				A624992D1880869400C1C866 /* Foundation.framework */,
 				A624992F1880869400C1C866 /* CoreGraphics.framework */,
@@ -384,6 +392,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yashvarma/Downloads,
+					/Users/marcmini/Documents/MMA,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TicTacToe/TicTacToe-Prefix.pch";
@@ -401,6 +410,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yashvarma/Downloads,
+					/Users/marcmini/Documents/MMA,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TicTacToe/TicTacToe-Prefix.pch";
@@ -471,6 +481,7 @@
 				A624995E1880869400C1C866 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A624995F1880869400C1C866 /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +490,7 @@
 				A62499611880869400C1C866 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
