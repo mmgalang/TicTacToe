@@ -9,6 +9,19 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+{
+    __weak IBOutlet UILabel *myLabelOne;
+    __weak IBOutlet UILabel *myLabelTwo;
+    __weak IBOutlet UILabel *myLabelThree;
+    __weak IBOutlet UILabel *myLabelFour;
+    __weak IBOutlet UILabel *myLabelFive;
+    __weak IBOutlet UILabel *myLabelSix;
+    __weak IBOutlet UILabel *myLabelSeven;
+    __weak IBOutlet UILabel *myLabelEight;
+    __weak IBOutlet UILabel *myLabelNine;
+    __weak IBOutlet UILabel *whichPlayerLabel;
+    
+}
 
 @end
 
@@ -19,6 +32,222 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)findLabelUsingPoint:(CGPoint *)point{
+
+    
+}
+
+int turnCounter = 0;
+
+
+- (NSString *)whoOne {
+    
+    if([myLabelOne.text compare:myLabelTwo.text] == NSOrderedSame && [myLabelOne.text compare:myLabelThree.text] == NSOrderedSame){
+        if ([myLabelOne.text isEqualToString:@"X"]) {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 1!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+                [winnerAlert show];
+        } else {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 2!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+                [winnerAlert show];
+        }
+    }
+    
+    if([myLabelFour.text compare:myLabelFive.text] == NSOrderedSame && [myLabelFour.text compare:myLabelSix.text] == NSOrderedSame){
+        if ([myLabelFour.text isEqualToString:@"X"]) {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 1!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        } else {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 2!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        }
+    }
+    
+    if([myLabelSeven.text compare:myLabelEight.text] == NSOrderedSame && [myLabelSeven.text compare:myLabelNine.text] == NSOrderedSame){
+        if ([myLabelSeven.text isEqualToString:@"X"]) {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 1!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        } else {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 2!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        }
+    }
+    
+    if([myLabelOne.text compare:myLabelFour.text] == NSOrderedSame && [myLabelOne.text compare:myLabelSeven.text] == NSOrderedSame){
+        if ([myLabelOne.text isEqualToString:@"X"]) {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 1!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        } else {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 2!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        }
+    }
+    
+    if([myLabelTwo.text compare:myLabelFive.text] == NSOrderedSame && [myLabelTwo.text compare:myLabelEight.text] == NSOrderedSame){
+        if ([myLabelTwo.text isEqualToString:@"X"]) {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 1!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        } else {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 2!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        }
+    }
+    
+    if([myLabelThree.text compare:myLabelSix.text] == NSOrderedSame && [myLabelThree.text compare:myLabelNine.text] == NSOrderedSame){
+        if ([myLabelThree.text isEqualToString:@"X"]) {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 1!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        } else {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 2!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        }
+    }
+    
+    if([myLabelOne.text compare:myLabelFive.text] == NSOrderedSame && [myLabelOne.text compare:myLabelNine.text] == NSOrderedSame){
+        if ([myLabelOne.text isEqualToString:@"X"]) {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 1!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        } else {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 2!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        }
+    }
+    
+    if([myLabelThree.text compare:myLabelFive.text] == NSOrderedSame && [myLabelThree.text compare:myLabelSeven.text] == NSOrderedSame){
+        if ([myLabelThree.text isEqualToString:@"X"]) {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 1!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        } else {
+            UIAlertView *winnerAlert = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:@"You Won Player 2!" delegate:nil cancelButtonTitle:@"Play Again?" otherButtonTitles: nil];
+            [winnerAlert show];
+        }
+    }
+    return 0;
+}
+
+- (IBAction)onLabelTapped:(UITapGestureRecognizer *)tapGestureRecognizer{
+    
+    CGPoint point = [tapGestureRecognizer locationInView:self.view];
+    if (CGRectContainsPoint(myLabelOne.frame, point)) {
+        myLabelOne.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        
+        if ([myLabelOne.text isEqualToString:@"X"]) {
+            myLabelOne.textColor = [UIColor blueColor];
+        } else if ([myLabelOne.text isEqualToString:@"O"]) {
+            myLabelOne.textColor = [UIColor redColor];
+        }
+    }
+    
+    if (CGRectContainsPoint(myLabelTwo.frame, point)) {
+        myLabelTwo.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        if ([myLabelTwo.text isEqualToString:@"X"]) {
+            myLabelTwo.textColor = [UIColor blueColor];
+        } else if ([myLabelTwo.text isEqualToString:@"O"]) {
+            myLabelTwo.textColor = [UIColor redColor];
+        }
+    }
+
+    if (CGRectContainsPoint(myLabelThree.frame, point)) {
+        myLabelThree.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        if ([myLabelThree.text isEqualToString:@"X"]) {
+            myLabelThree.textColor = [UIColor blueColor];
+        } else if ([myLabelThree.text isEqualToString:@"O"]) {
+            myLabelThree.textColor = [UIColor redColor];
+        }
+    }
+    
+    if (CGRectContainsPoint(myLabelFour.frame, point)) {
+        myLabelFour.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        if ([myLabelFour.text isEqualToString:@"X"]) {
+            myLabelFour.textColor = [UIColor blueColor];
+        } else if ([myLabelFour.text isEqualToString:@"O"]) {
+            myLabelFour.textColor = [UIColor redColor];
+        }
+    }
+    
+    if (CGRectContainsPoint(myLabelFive.frame, point)) {
+        myLabelFive.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        if ([myLabelFive.text isEqualToString:@"X"]) {
+            myLabelFive.textColor = [UIColor blueColor];
+        } else if ([myLabelFive.text isEqualToString:@"O"]) {
+            myLabelFive.textColor = [UIColor redColor];
+        }
+    }
+    
+    if (CGRectContainsPoint(myLabelSix.frame, point)) {
+        myLabelSix.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        if ([myLabelSix.text isEqualToString:@"X"]) {
+            myLabelSix.textColor = [UIColor blueColor];
+        } else if ([myLabelSix.text isEqualToString:@"O"]) {
+            myLabelSix.textColor = [UIColor redColor];
+        }
+    }
+    
+    if (CGRectContainsPoint(myLabelSeven.frame, point)) {
+        myLabelSeven.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        if ([myLabelSeven.text isEqualToString:@"X"]) {
+            myLabelSeven.textColor = [UIColor blueColor];
+        } else if ([myLabelSeven.text isEqualToString:@"O"]) {
+            myLabelSeven.textColor = [UIColor redColor];
+        }
+    }
+    
+    if (CGRectContainsPoint(myLabelSeven.frame, point)) {
+        myLabelSeven.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        if ([myLabelSeven.text isEqualToString:@"X"]) {
+            myLabelSeven.textColor = [UIColor blueColor];
+        } else if ([myLabelSeven.text isEqualToString:@"O"]) {
+            myLabelSeven.textColor = [UIColor redColor];
+        }
+    }
+    
+    if (CGRectContainsPoint(myLabelEight.frame, point)) {
+        myLabelEight.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        if ([myLabelEight.text isEqualToString:@"X"]) {
+            myLabelEight.textColor = [UIColor blueColor];
+        } else if ([myLabelEight.text isEqualToString:@"O"]) {
+            myLabelEight.textColor = [UIColor redColor];
+        }
+    }
+    
+    if (CGRectContainsPoint(myLabelNine.frame, point)) {
+        myLabelNine.text = [NSString stringWithFormat:@"%@", whichPlayerLabel.text];
+        turnCounter ++;
+        if ([myLabelNine.text isEqualToString:@"X"]) {
+            myLabelNine.textColor = [UIColor blueColor];
+        } else if ([myLabelNine.text isEqualToString:@"O"]) {
+            myLabelNine.textColor = [UIColor redColor];
+        }
+    }
+    
+    [self whoOne];
+    
+    if (turnCounter % 2 == 0) {
+        whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
+        whichPlayerLabel.textColor = [UIColor redColor];
+    } else {
+        whichPlayerLabel.text = [NSString stringWithFormat:@"X"];
+        whichPlayerLabel.textColor = [UIColor blueColor];
+    }
+    
+    if (turnCounter > 9){
+        UIAlertView *endGame = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"Game" delegate:nil cancelButtonTitle:@"Play Again" otherButtonTitles: nil];
+        [endGame show];
+    }
+}
+
+    
+
+
 
 - (void)didReceiveMemoryWarning
 {
